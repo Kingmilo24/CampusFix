@@ -127,4 +127,19 @@ app.patch("/api/reports/:id", (req, res) => {
 
   res.json({
     success: true,
-    message: "Status updated
+    message: "Status updated."
+  });
+});
+
+app.post("/api/admin/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.json({
+      success: true,
+      message: "Logged out."
+    });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`CampusFix running on port ${PORT}`);
+});
