@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFix</title>
+</head>
+<body>
+
+  <h1>CampusFix</h1>
+  <p>Report. Connect. Solve.</p>
+
+  <p>Report campus problems such as network issues and power outages.</p>
+
+  <button onclick="showForm('Network Problem')">
+    Network Problem
+  </button>
+
+  <button onclick="showForm('Power Problem')">
+    Power Problem
+  </button>
+
+  <div id="formSection" style="display:none;">
+
+    <h2 id="formTitle"></h2>
+
+    <form id="reportForm">
+
+      <input
+        type="text"
+        id="location"
+        placeholder="Enter location"
+        required
+      >
+
+      <br><br>
+
+      <textarea
+        id="description"
+        placeholder="Describe the problem"
+        required
+      ></textarea>
+
+      <br><br>
+
+      <input
+        type="tel"
+        id="phone"
